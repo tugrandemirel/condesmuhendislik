@@ -25,6 +25,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Görsel</th>
+                                <th>İcon</th>
                                 <th>Ad</th>
                                 <th>Durum</th>
                                 <th>İşlem Tarihi</th>
@@ -37,6 +38,13 @@
                                 <th scope="row">{{ $value->id }}</th>
                                 <td>
                                     <img src="{{ asset($value->image) }}" class="img-fluid" width="75" alt="{{ $value->title }}">
+                                </td>
+                                <td>
+                                    @if($value->icon)
+                                    <img src="{{ asset($value->icon) }}" class="img-fluid" width="75" alt="{{ $value->title }}">
+                                    @else
+                                        -
+                                    @endif
                                 </td>
                                 <td>{{ $value->title }}</td>
                                 <td>
