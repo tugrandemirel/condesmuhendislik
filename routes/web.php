@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\SiteSettingController;
+use App\Http\Controllers\Admin\SeoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,5 +20,15 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::prefix('admin')->as('admin.')->group(function () {
+
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::resource('site-ayarlari', SiteSettingController::class)
+            ->parameter('site-ayarlari', 'site_setting')
+            ->only(['index', 'store', 'update'])
+            ->names('site_setting');
+    Route::resource('seo-ayarlari', SeoController::class)
+            ->parameter('seo-ayarlari', 'seo')
+            ->except(['show', 'destroy'])
+            ->names('seo');
 });
