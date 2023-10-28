@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\SocialMediaController;
+use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\ServiceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,4 +38,13 @@ Route::prefix('admin')->as('admin.')->group(function () {
             ->parameter('sosyal-medya-ayarlari', 'social_media')
             ->except(['show'])
             ->names('social_media');
+    Route::resource('blog', BlogController::class)
+            ->except(['show']);
+    Route::resource('hizmetlerimiz', ServiceController::class)
+        ->parameter('hizmetlerimiz', 'service')
+        ->except(['show'])
+        ->names('service');
+
+    Route::post('upload', [App\Http\Controllers\HomeController::class, 'upload'])->name('upload');
+
 });

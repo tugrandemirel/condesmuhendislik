@@ -124,10 +124,10 @@
                     <div class="collapse" id="email">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="email-inbox.html">Bloglar</a>
+                                <a href="{{ route('admin.blog.index') }}">Bloglar</a>
                             </li>
                             <li>
-                                <a href="email-templates.html">Yeni Blog Oluştur</a>
+                                <a href="{{ route('admin.blog.create') }}">Yeni Blog Oluştur</a>
                             </li>
                         </ul>
                     </div>
@@ -141,10 +141,10 @@
                     <div class="collapse" id="service">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="email-inbox.html">Hizmetler</a>
+                                <a href="{{ route('admin.service.index') }}">Hizmetler</a>
                             </li>
                             <li>
-                                <a href="email-templates.html">Yeni Hizmet Oluştur</a>
+                                <a href="{{ route('admin.service.create') }}">Yeni Hizmet Oluştur</a>
                             </li>
                         </ul>
                     </div>
