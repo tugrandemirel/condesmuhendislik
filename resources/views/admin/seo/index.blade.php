@@ -33,12 +33,12 @@
                             <tbody>
                             @foreach($seos as $key=>$value)
                             <tr>
-                                <th scope="row">3</th>
+                                <th scope="row">{{ $value->id }}</th>
                                 <td>{{ $value->title }}</td>
                                 <td>{{ $value->page_type }}</td>
-                                <td>{{ $value->created_at }}</td>
+                                <td>{{ $value->updated_at }}</td>
                                 <td>
-                                    <a href="{{ route('admin.seo.edit', $value->id) }}" class="btn btn-primary btn-sm">Düzenle</a>
+                                    <a href="{{ route('admin.seo.edit', ['seo' => $value]) }}" class="btn btn-primary btn-sm">Düzenle</a>
                                 </td>
                             </tr>
                             @endforeach

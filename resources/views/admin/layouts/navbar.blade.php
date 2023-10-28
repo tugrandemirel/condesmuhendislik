@@ -178,7 +178,7 @@
                                 <a href="{{ route('admin.seo.index') }}">SEO Ayarları</a>
                             </li>
                             <li>
-                                <a href="email-templates.html">Sosyal Medya Ayarları</a>
+                                <a href="{{ route('admin.social_media.index') }}">Sosyal Medya Ayarları</a>
                             </li>
                         </ul>
                     </div>

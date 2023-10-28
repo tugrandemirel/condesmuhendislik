@@ -5,9 +5,9 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title">Site Ayarları</h4>
+                    <h4 class="header-title">SEO Ayarları</h4>
                     <p class="sub-header">
-                        Buradan site ayarlarınızı {{ isset($seo) ? 'güncelleyebilirsiniz' : 'kaydedebilirsiniz' }}
+                        Buradan seo ayarlarınızı {{ isset($seo) ? 'güncelleyebilirsiniz' : 'kaydedebilirsiniz' }}
                     </p>
                     <form action="{{ isset($seo) ? route('admin.seo.update',['seo' => $seo]) : route('admin.seo.store') }}" method="post">
                         @csrf
@@ -57,10 +57,10 @@
                                 <div class="mb-3">
                                     <label class="form-label">Sayfa Tipi</label>
                                     <select name="page_type" id="" class="form-select">
-                                        <option value="GENEL" @if($seo->page_type == 'GENEL') selected @endif>GENEL</option>
-                                        <option value="HIZMETLER" @if($seo->page_type == 'HIZMETLER') selected @endif>HİZMETLER</option>
-                                        <option value="BLOG" @if($seo->page_type == 'BLOG') selected @endif>BLOG</option>
-                                        <option value="ILETISIM" @if($seo->page_type == 'ILETISIM') selected @endif>İLETİSİM</option>
+                                        <option value="GENEL" {{ isset($seo) && $seo->page_type == 'GENEL' ? 'selected' : '' }}>GENEL</option>
+                                        <option value="HIZMETLER" {{ isset($seo) && $seo->page_type == 'HIZMETLER' ? 'selected' : '' }}>HİZMETLER</option>
+                                        <option value="BLOG" {{ isset($seo) && $seo->page_type == 'BLOG' ? 'selected' : '' }}>BLOG</option>
+                                        <option value="ILETISIM" {{ isset($seo) && $seo->page_type == 'ILETISIM' ? 'selected' : '' }}>İLETİSİM</option>
                                     </select>
                                 </div>
                             </div>

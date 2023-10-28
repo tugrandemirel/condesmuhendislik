@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\SeoController;
+use App\Http\Controllers\Admin\SocialMediaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,4 +32,8 @@ Route::prefix('admin')->as('admin.')->group(function () {
             ->parameter('seo-ayarlari', 'seo')
             ->except(['show', 'destroy'])
             ->names('seo');
+    Route::resource('sosyal-medya-ayarlari', SocialMediaController::class)
+            ->parameter('sosyal-medya-ayarlari', 'social_media')
+            ->except(['show'])
+            ->names('social_media');
 });
