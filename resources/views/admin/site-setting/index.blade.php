@@ -103,8 +103,60 @@
                             <hr>
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="row phones" >
-                                        @if(!$siteSetting->phone)
+                                    <div class="row " >
+                                        <div class="col-md-3">
+                                            <div class="mb-3">
+                                                <label class="form-label">Site 1. Telefon Numarası</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ isset($siteSetting) ? $siteSetting->phone : old('phone') }}">
+                                                </div>
+                                                @error('phone')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="mb-3">
+                                                <label class="form-label">Site 1. Telefon Sahibi</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control @error('phone_user') is-invalid @enderror" name="phone_user" value="{{ isset($siteSetting) ? $siteSetting->phone_user : old('phone_user') }}">
+                                                </div>
+                                                @error('phone_user')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="mb-3">
+                                                <label class="form-label">Site 2. Telefon Numarası</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control @error('phone_2') is-invalid @enderror" name="phone_2" value="{{ isset($siteSetting) ? $siteSetting->phone_2 : old('phone_2') }}">
+                                                </div>
+                                                @error('phone_2')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="mb-3">
+                                                <label class="form-label">Site 2. Telefon Sahibi</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control @error('phone_user_2') is-invalid @enderror" name="phone_user_2" value="{{ isset($siteSetting) ? $siteSetting->phone_user_2 : old('phone_user_2') }}">
+                                                </div>
+                                                @error('phone_user_2')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        {{--@if(!$siteSetting->phone)
                                             <div class="col-md-9">
                                                 <div class="mb-3">
                                                     <label class="form-label">Site Telefon Numarası</label>
@@ -143,7 +195,7 @@
                                                 @endif
                                                 @php $i++; @endphp
                                             @endforeach
-                                        @endif
+                                        @endif--}}
                                     </div>
                                 </div>
 
@@ -166,12 +218,22 @@
                                     <div class="mb-3">
                                         <label for="" class="form-label">HEADER Görsel</label>
                                         <input type="file" class="form-control @error('header_image') is-invalid @enderror" name="header_image">
+                                        @error('header_image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="" class="form-label">FOOTER Görsel</label>
                                         <input type="file" class="form-control @error('footer_image') is-invalid @enderror" name="footer_image">
+                                        @error('footer_image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 @isset($siteSetting->header_image)
@@ -199,12 +261,22 @@
                                     <div class="mb-3">
                                         <label for="" class="form-label">Anasayfa Birinci Video Arka Plan Görsel</label>
                                         <input type="file" class="form-control @error('home_first_image') is-invalid @enderror" name="home_first_image">
+                                        @error('home_first_image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Anasayfa Birinci Video URL</label>
                                         <input type="text" class="form-control @error('home_first_url') is-invalid @enderror" name="home_first_url">
+                                        @error('home_first_url')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 @isset($siteSetting->home_first_image)
@@ -223,12 +295,22 @@
                                     <div class="mb-3">
                                         <label for="" class="form-label">Anasayfa İkinci Video Arka Plan Görsel</label>
                                         <input type="file" class="form-control @error('home_second_image') is-invalid @enderror" name="home_second_image">
+                                        @error('home_second_image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Anasayfa İkinci Video URL</label>
                                         <input type="text" class="form-control @error('home_second_url') is-invalid @enderror" name="home_second_url">
+                                        @error('home_second_url')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -249,18 +331,33 @@
                                     <div class="mb-3">
                                         <label for="" class="form-label">Anasayfa Sıkça Sorulan Sorular ANA Görsel</label>
                                         <input type="file" class="form-control @error('home_faq_main') is-invalid @enderror" name="home_faq_main">
+                                        @error('home_faq_main')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Anasayfa Sıkça Sorulan Sorular ÜST Görsel</label>
                                         <input type="file" class="form-control @error('home_faq_up') is-invalid @enderror" name="home_faq_up">
+                                        @error('home_faq_up')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Anasayfa Sıkça Sorulan Sorular ALT Görsel</label>
                                         <input type="file" class="form-control @error('home_faq_down') is-invalid @enderror" name="home_faq_down">
+                                        @error('home_faq_down')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 @isset($siteSetting->home_faq_main)
@@ -297,12 +394,22 @@
                                     <div class="mb-3">
                                         <label for="" class="form-label">Blogların Listelendiği Sayfa BANNER Görsel</label>
                                         <input type="file" class="form-control @error('blog_image') is-invalid @enderror" name="blog_image">
+                                        @error('blog_image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Blog Detay Sayfası BANNER Görsel</label>
                                         <input type="file" class="form-control @error('blog_detail_image') is-invalid @enderror" name="blog_detail_image">
+                                        @error('blog_detail_image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -332,12 +439,22 @@
                                     <div class="mb-3">
                                         <label for="" class="form-label">Hizmetlerin Listelendiği Sayfa BANNER Görsel</label>
                                         <input type="file" class="form-control @error('service_image') is-invalid @enderror" name="service_image">
+                                        @error('service_image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="" class="form-label">Hizmet Detay Sayfası BANNER Görsel</label>
                                         <input type="file" class="form-control @error('service_detail_image') is-invalid @enderror" name="service_detail_image">
+                                        @error('service_detail_image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -367,6 +484,11 @@
                                     <div class="mb-3">
                                         <label for="" class="form-label">İletişim Sayfası BANNER Görsel</label>
                                         <input type="file" class="form-control @error('contact_image') is-invalid @enderror" name="contact_image">
+                                        @error('contact_image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -398,7 +520,7 @@
     </div>
 @endsection
 @section('js')
-    <script>
+   {{-- <script>
         $(document).ready(function () {
             $('#addPhone').click(function () {
                 var html = '' +
@@ -418,5 +540,5 @@
                 $(this).closest('.col-md-9').remove();
             });
         });
-    </script>
+    </script>--}}
 @endsection

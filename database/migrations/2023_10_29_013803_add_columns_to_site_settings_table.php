@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('service_image')->nullable()->after('blog_detail_image');
             $table->string('service_detail_image')->nullable()->after('service_image');
             $table->string('contact_image')->nullable()->after('service_detail_image');
+            $table->text('map')->nullable()->after('contact_image');
         });
     }
 
@@ -39,7 +40,23 @@ return new class extends Migration
     public function down()
     {
         Schema::table('site_settings', function (Blueprint $table) {
-            //
+            $table->dropColumn([
+                'header_image',
+                'footer_image',
+                'home_first_image',
+                'home_first_url',
+                'home_second_image',
+                'home_second_url',
+                'home_faq_main',
+                'home_faq_up',
+                'home_faq_down',
+                'blog_image',
+                'blog_detail_image',
+                'service_image',
+                'service_detail_image',
+                'contact_image',
+                'map',
+            ]);
         });
     }
 };

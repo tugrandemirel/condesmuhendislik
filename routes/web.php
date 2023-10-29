@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SliderController;
+
+use App\Http\Controllers\Front\IndexController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,10 +19,16 @@ use App\Http\Controllers\Admin\SliderController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('view.share')->group(function (){
+    Route::get('/', [IndexController::class, 'index'])->name('index');
+    Route::get('/hakkimizda', [IndexController::class, 'about'])->name('about');
+    Route::get('/makalelerimiz', [IndexController::class, 'blog'])->name('blog');
+    Route::get('/makalelerimiz/{slug}', [IndexController::class, 'blogDetail'])->name('blog.detail');
+    Route::get('/hizmetlerimiz', [IndexController::class, 'service'])->name('service');
+    Route::get('/hizmetlerimiz/{slug}', [IndexController::class, 'serviceDetail'])->name('service.detail');
+    Route::get('/iletisim', [IndexController::class, 'contact'])->name('contact');
 });
+
 
 Auth::routes();
 Route::prefix('admin')->as('admin.')->group(function () {

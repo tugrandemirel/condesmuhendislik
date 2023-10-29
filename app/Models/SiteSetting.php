@@ -30,5 +30,10 @@ class SiteSetting extends Model
         'service_image',
         'service_detail_image',
         'contact_image',
+        'map',
+        'phone_user',
+        'phone_2',
+        'phone_user_2',
     ];
+
 }
