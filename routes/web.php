@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\SliderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,7 +45,10 @@ Route::prefix('admin')->as('admin.')->group(function () {
         ->parameter('hizmetlerimiz', 'service')
         ->except(['show'])
         ->names('service');
-
+    Route::resource('slider', SliderController::class)
+        ->parameter('slider', 'slider')
+        ->except(['show'])
+        ->names('slider');
     Route::post('upload', [App\Http\Controllers\HomeController::class, 'upload'])->name('upload');
 
 });

@@ -4,8 +4,9 @@
         <li class="dropdown notification-list topbar-dropdown">
             <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                 <span class="pro-user-name ms-1">
-                                    {{ auth()->user()->name }} <i class="mdi mdi-chevron-down"></i>
-                                </span>
+                    {{ auth()->user()->name }}
+                    <i class="mdi mdi-chevron-down"></i>
+                </span>
             </a>
             <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
                 <!-- item-->
@@ -16,8 +17,7 @@
                              <div class="dropdown-divider"></div>
 
                 <a class="dropdown-item notify-item" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
                 </a>
 
@@ -105,7 +105,7 @@
 
             <ul id="side-menu">
 
-                <li class="menu-title">Navigation</li>
+                <li class="menu-title">İŞLEMLER</li>
 
                 <li>
                     <a href="{{ route('admin.home') }}">
@@ -162,15 +162,27 @@
 
 
                 <li class="menu-title mt-2">SİTE AYARLARI</li>
-
                 <li>
-                    <a href="#setting" data-bs-toggle="collapse">
-                        <i class="mdi mdi-cog-sync-outline"></i>
+                    <a href="#sidebarMultilevel" data-bs-toggle="collapse">
+                        <i class="mdi mdi-share-variant"></i>
                         <span> Ayarlar </span>
                         <span class="menu-arrow"></span>
                     </a>
-                    <div class="collapse" id="setting">
+                    <div class="collapse" id="sidebarMultilevel">
                         <ul class="nav-second-level">
+
+                            <li>
+                                <a href="#sidebarMultilevel3" data-bs-toggle="collapse">
+                                    Görsel Ayarları <span class="menu-arrow"></span>
+                                </a>
+                                <div class="collapse" id="sidebarMultilevel3">
+                                    <ul class="nav-second-level">
+                                        <li>
+                                            <a href="{{ route('admin.slider.index') }}">Slider</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
                             <li>
                                 <a href="{{ route('admin.site_setting.index') }}">Site Ayarları</a>
                             </li>
@@ -180,6 +192,10 @@
                             <li>
                                 <a href="{{ route('admin.social_media.index') }}">Sosyal Medya Ayarları</a>
                             </li>
+                            <li>
+                                <a href="{{ route('admin.social_media.index') }}">İletişim Sayfası Ayarları</a>
+                            </li>
+
                         </ul>
                     </div>
                 </li>
