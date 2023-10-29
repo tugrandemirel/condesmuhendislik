@@ -4,16 +4,30 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="keywords"
-          content="Construction, Factory, elementor, engineering, Technology, online bussines, Ecommerce, Shop">
-    <meta name="description"
-          content="Factry - Factory and Industry Service HTML5 Template for all kinds of Construction,Factory,elementor, engineering, Technology, online bussines, Ecommerce, Shop,website">
-    <title>Factry - Factory and Industry Service HTML5 Template</title>
-    <meta property="og:site_name" content="Factry">
-    <meta property="og:url" content="">
+    <meta name="author" content="Tuğran Demirel">
+    <meta name="description" content="@yield('meta_description')">
+    <meta name="keywords" content="@yield('meta_keywords')">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <title>{{ !is_null($_siteSetting->title) ? $_siteSetting->title : env('app_name') }} @yield('title')</title>
+
+    {{--    facebook--}}
+    <meta property="og:site_name" content="{{ $_siteSetting->title ?? env('app_name') }}">
+    <meta property="og:title" content="@yield('og_title')">
+    <meta property="og:description" content="@yield('og_description')">
+    <meta property="og:image" content="@yield('og_image')">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Factry - Factory and Industry Service HTML5 Template">
-    <meta name='og:image' content='images/assets/ogg.png'>
+
+    {{--    Whatsapp--}}
+
+    <meta property="wa:card" content="summary_large_image">
+    <meta property="wa:title" content="@yield('wa_title')">
+    <meta property="wa:description" content="@yield('wa_description')">
+    <meta property="wa:image" content="@yield('wa_image')">
+    <meta property="wa:locale" content="tr">
+    <meta property="wa:site" content="{{ $_siteSetting->title ?? env('app_name') }}">
+    <meta property="wa:url" content="{{ url()->full() }}">
+
+
     <!-- For IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- For Resposive Device -->
@@ -27,7 +41,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#913BFF">
 
     <!-- <link rel="manifest" href="site.webmanifest" /> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset($_siteSetting->favicon) ?? '' }}" />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->

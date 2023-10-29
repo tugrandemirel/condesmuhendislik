@@ -102,7 +102,16 @@
                         </div>
                         <div class="col-6 d-lg-none d-md-inline-block">
                             <div class="logo-area">
-                                <a class="front" href="{{ route('index') }}"><img src="{{ asset('assets/front/img/logo/header-logo-1.png') }}" alt="Header-logo"></a>
+                                <a class="front" href="{{ route('index') }}"><img src="{{ asset($_siteSetting->logo) }}" alt="Header-logo" width="75"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-2 col-6">
+                            <div class="right-nav mb-0 d-flex align-items-center justify-content-end ms-5">
+                                <div class="hamburger-menu">
+                                    <a class="round-menu" href="javascript:void(0);">
+                                        <i class="far fa-bars"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -113,3 +122,28 @@
     <!-- /.theme-main-menu -->
 </header>
 <!-- header-area end -->
+
+<!-- slide-bar start -->
+<aside class="slide-bar">
+    <div class="close-mobile-menu">
+        <a href="javascript:void(0);">
+            <i class="fas fa-times"></i>
+        </a>
+    </div>
+    <!-- offset-sidebar start -->
+    <div class="offset-sidebar">
+        <div class="offset-widget offset-logo mb-30">
+            <a href="{{ route('index') }}"><img width="50" src="{{ asset($_siteSetting->logo) }}" alt="Header-logo"></a>
+        </div>
+        <div class="mobile-menu"></div>
+
+
+        <!-- <div class="login-btn text-center">
+            <a class="ht_btn w-100" href="login.html">Login</a>
+        </div> -->
+    </div>
+    <!-- offset-sidebar end -->
+
+</aside>
+<div class="body-overlay"></div>
+<!-- slide-bar end -->

@@ -10,7 +10,7 @@
             <div class="row pb-50">
                 <div class="col-l2 text-lg-start text-center">
                     <div class="footer__widget mb-30">
-                        <a href="index.html"><img src="{{ asset('assets/front/img/logo/header-logo-1.png') }}" alt="Logo"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/front/img/logo/header-logo-1.png') }}" alt="Logo"></a>
                     </div>
                 </div>
             </div>
@@ -47,19 +47,22 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer__widget mb-30">
                         <div class="footer__contact__one">
-                            <h4 class="widget__title mb-25">Quick Links</h4>
+                            <h4 class="widget__title mb-25">Hızlı Erişim</h4>
                             <ul class="fot-list">
                                 <li>
-                                    <a href="faq.html">About Company</a>
+                                    <a href="{{ route('index') }}">Anasayfa</a>
                                 </li>
                                 <li>
-                                    <a href="faq.html">Our Services</a>
+                                    <a href="{{ route('about') }}">Hakkımızda</a>
                                 </li>
                                 <li>
-                                    <a href="faq.html">Case Study</a>
+                                    <a href="{{ route('service') }}">Hizmetlerimiz</a>
                                 </li>
                                 <li>
-                                    <a href="faq.html">Pricing</a>
+                                    <a href="{{ route('blog') }}">Makalelerimiz</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('contact') }}">İletişim</a>
                                 </li>
                             </ul>
                         </div>
@@ -68,8 +71,9 @@
                 <div class="row mb-25 d-none">
                     <div class="col-xxl-3 col-lg-4 col-md-6">
                         <div class="footer__widget mb-30 px-xxl-3">
-                            <a href="index.html"><img src="{{ asset('assets/front/img/logo/header-logo-1.png') }}" alt="Logo"></a>
-                            <p class="footer__description mt-40">Rapidiously unleash best of the breed
+                            <a href="{{ route('index') }}"><img src="{{ asset('assets/front/img/logo/header-logo-1.png') }}" alt="Logo"></a>
+                            <p class="footer__description mt-40">
+                                Rapidiously unleash best of the breed
                                 meta-services
                                 after
                                 principled vortals.</p>
@@ -129,7 +133,7 @@
                         <div class="copyright__text mb-30">
                             <p>
                                 <a class="fw-bold" href="tel:+905443380633">Tuğran Demirel</a>
-                                © 2023 Factry. Tüm hakları saklıdır.</p>
+                                © 2023 Condes Mühendislik. Tüm hakları saklıdır.</p>
                         </div>
                     </div>
 

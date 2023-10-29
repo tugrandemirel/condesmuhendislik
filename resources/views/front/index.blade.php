@@ -1,4 +1,16 @@
 @extends('front.layouts.app')
+@section('title', ' - Anasayfa')
+@section('meta_description', isset($seo->description)  ? $seo->description : 'Condes Mühendislik'  )
+@section('meta_keywords', isset($seo->keywords)  ? $seo->keywords : 'condes mühendislik, condes, mühendislik'  )
+
+@section('og_title', isset($seo->title) ? $seo->title : ' Anasayfa')
+@section('og_description', isset($seo->description) ? $seo->description : ' Anasayfa'  )
+@section('og_image', isset($_siteSetting->logo) ? asset($_siteSetting->logo) : ' Anasayfa'  )
+
+@section('wa_title', isset($seo->title) ? $seo->title : ' Anasayfa')
+@section('wa_description', isset($seo->description) ? $seo->description : ' Anasayfa'  )
+@section('wa_image', isset($_siteSetting->logo) ? asset($_siteSetting->logo) : ' Anasayfa'  )
+
 @section('content')
     <!-- theme__main__banner start -->
     <section class="theme__main__banner black-bg pt-215 pb-205 pb-lg-100">
