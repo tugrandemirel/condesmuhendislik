@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\Contact;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $serviceCount = Service::all()->count();
+        $blogCount = Blog::all()->count();
+        $contactCount = Contact::all()->count();
+        return view('admin.index', compact('serviceCount', 'blogCount', 'contactCount'));
     }
 
     public function upload(Request $request)

@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\ContactController;
 
 use App\Http\Controllers\Front\IndexController;
 /*
@@ -27,6 +28,7 @@ Route::middleware('view.share')->group(function (){
     Route::get('/hizmetlerimiz', [IndexController::class, 'service'])->name('service');
     Route::get('/hizmetlerimiz/{slug}', [IndexController::class, 'serviceDetail'])->name('service.detail');
     Route::get('/iletisim', [IndexController::class, 'contact'])->name('contact');
+    Route::post('/iletisim', [IndexController::class, 'contactStore'])->name('contact.store');
 });
 
 
@@ -57,6 +59,10 @@ Route::prefix('admin')->as('admin.')->group(function () {
         ->parameter('slider', 'slider')
         ->except(['show'])
         ->names('slider');
+    Route::resource('mesajlar', ContactController::class)
+        ->parameter('mesajlar', 'contact')
+        ->only(['index', 'show'])
+        ->names('contact');
     Route::post('upload', [App\Http\Controllers\HomeController::class, 'upload'])->name('upload');
 
 });

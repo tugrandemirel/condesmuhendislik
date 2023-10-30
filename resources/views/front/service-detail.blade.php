@@ -61,7 +61,7 @@
                             </figure>
                         @endisset
                         <p>
-                            {!! $service->description !!}
+                            {!! $service->content !!}
                         </p>
 
                     </div>

@@ -154,7 +154,7 @@
 
 
                 <li>
-                    <a href="{{ route('admin.home') }}">
+                    <a href="{{ route('admin.contact.index') }}">
                         <i class="mdi mdi-message"></i>
                         <span> Mesajlar </span>
                     </a>
@@ -191,9 +191,6 @@
                             </li>
                             <li>
                                 <a href="{{ route('admin.social_media.index') }}">Sosyal Medya Ayarları</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('admin.social_media.index') }}">İletişim Sayfası Ayarları</a>
                             </li>
 
                         </ul>

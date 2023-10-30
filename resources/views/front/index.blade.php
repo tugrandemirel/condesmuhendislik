@@ -14,6 +14,13 @@
 @section('content')
     <!-- theme__main__banner start -->
     <section class="theme__main__banner black-bg pt-215 pb-205 pb-lg-100">
+
+        @if(session()->has('success'))
+            <x-alert type="success">{{ session()->get('success') }}</x-alert>
+        @endif
+        @if(session()->has('error'))
+            <x-alert type="danger">{{ session()->get('error') }}</x-alert>
+        @endif
         <div class="shapes__blur"></div>
         @if(!is_null($_siteSetting->header_image))
             <img class="shapes shapes__1" src="{{ asset($_siteSetting->header_image) }}" alt="{{ $_siteSetting->title }}">

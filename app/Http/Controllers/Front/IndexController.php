@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Contact;
 use App\Models\Seo;
 use App\Models\Service;
 use App\Models\Slider;
@@ -78,6 +79,30 @@ class IndexController extends Controller
     public function contact()
     {
         $seo = Seo::where('page_type', 'ILETISIM')->first();
+        return view('front.contact', compact('seo'));
     }
 
+    public function contactStore(Request $request)
+    {
+        $data = $request->validate([
+            'name' => 'required|string|max:50',
+            'surname' => 'required|string|max:50',
+            'phone' => 'required|string|max:13',
+            'email' => 'required|email:rfc,dns',
+            'message' => 'required|string'
+        ], [
+            'name.required' => 'Ad alanı zorunludur.',
+            'surname.required' => 'Soyad alanı zorunludur.',
+            'phone.required' => 'Telefon alanı zorunludur.',
+            'phone.max' => 'Telefon alanı en fazla 13 haneli olabilir.(Sayılar ve + dışındakileri siliniz.)',
+            'email.required' => 'Email alanı zorunludur.',
+            'email.email' => 'Lütfen geçerli bir email giriniz.',
+            'message.required' => 'Mesajınız alanı zorunludur.',
+        ]);
+
+        $create = Contact::create($data);
+        if ($create)
+            return redirect()->back()->with('success', 'Mesajınız başarılı bir şekilde iletilmiştir.');
+        return redirect()->back()->with('error', 'Mesajınızın gönderim sırasında bir hata ile karşılaşıldı.');
+    }
 }
