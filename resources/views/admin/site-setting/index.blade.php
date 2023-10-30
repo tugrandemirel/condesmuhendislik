@@ -361,7 +361,7 @@
                                     </div>
                                 </div>
                                 @isset($siteSetting->home_faq_main)
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="" class="form-label">
                                                 <img src="{{ asset($siteSetting->home_faq_main) }}" alt="" width="150">
@@ -370,7 +370,7 @@
                                     </div>
                                 @endisset
                                 @isset($siteSetting->home_faq_down)
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="" class="form-label">
                                                 <img src="{{ asset($siteSetting->home_faq_down) }}" alt="" width="150">
@@ -379,7 +379,7 @@
                                     </div>
                                 @endisset
                                 @isset($siteSetting->home_faq_up)
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="" class="form-label">
                                                 <img src="{{ asset($siteSetting->home_faq_up) }}" alt="" width="150">

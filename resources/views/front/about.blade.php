@@ -40,14 +40,16 @@
     <!-- about__area start -->
     <section class="about__area">
         <div class="about__section__wrapper2 pt-245 pb-140 pt-lg-120 pb-lg-40 pb-md-20">
-            <img class="about__shape__1" src="{{ asset('assets/front/img/shape/about-line-2a.svg') }}" alt="About Shape">
+            <img class="about__shape__1" src="{{ asset('assets/front/img/shape/about-line-2a.svg') }}"
+                 alt="About Shape">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-6">
                         <div class="about__img__wrapper__four mb-30">
                             <img class="main__img__5d d-none d-xl-inline-block"
                                  src="{{ asset('assets/front/img/about/about-img-5d.jpg') }}" alt="About">
-                            <img class="main__img__4b" src="{{ asset('assets/front/img/about/about-img-4d.jpg') }}" alt="About">
+                            <img class="main__img__4b" src="{{ asset('assets/front/img/about/about-img-4d.jpg') }}"
+                                 alt="About">
                             <div class="experience__box">
                                 <img class="icon" src="{{ asset('assets/front/img/icon/icon-9a.svg') }}" alt="Icon">
                                 <span>A+</span>
@@ -59,9 +61,26 @@
                         <div class="about__text__wrapper ps-xl-3 mb-30">
                             <div class="section__title mb-30">
                                 <h4 class="sub__title__one text-theme mb-20">ŞİRKET HAKKINDA</h4>
-                                <h2 class="section__title__one mb-25">Üstün Çözümler için Bizi Tercih Edebilirsiniz.
+                                <h2 class="section__title__one mb-25">Vizyonumuz
                                 </h2>
-                                <p class="mb-35">Mühendislik'te yenilik, Condes'te evrensel standart!</p>
+                                <p class="mb-35">İnsanlığın günümüz ve gelecekteki ihtiyaçları doğrultusunda bilimsel
+                                    çalışmalar yapan,
+
+                                    Mühendislik biliminde çağın teknolojisine yatkın olan,
+
+                                    İmalat, enerji ve mekanik alanlarında bilimsel analizler yapan,
+
+                                    Ekip olarak mühendislik çalışmalarına uyum sağlayabilen, proje geliştirebilen,
+                                    uygulayabilen ve taahhüt edebilen nitelikte bir kuruluş olmak.</p>
+                                <h2 class="section__title__one mb-25">Misyonumuz
+                                </h2>
+                                <p class="mb-35">Gelişmekte olan teknolojiye çağımızın gerektiren alanlarında çalışmalar
+                                    yaparak endüstrinin gelişimine katkıda bulunan,
+
+                                    İnsanlığın konforunu arttırmak,
+
+                                    Daha sağlıklı ve daha güvenli çalışma hayatı için çalışmalar yapabilen bir kuruluş
+                                    olmak.</p>
                                 <a href="{{ route('contact') }}" class="ht_btn hover-bg"><span>İLETİŞİME GEÇ <img
                                             src="{{ asset('assets/front/img/icon/arrow1.svg') }}" alt=""></span></a>
                             </div>
@@ -130,19 +149,19 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__box mb-30">
                         <h3 class="counter__number"><span class="counter">5</span>Yıl</h3>
-                        <p>Deneyim<br />Süremiz</p>
+                        <p>Deneyim<br/>Süremiz</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__box ps-xl-5 mb-30">
                         <h3 class="counter__number"><span class="counter">{{ $serviceCount }}</span></h3>
-                        <p>Toplam<br />Hizmetimiz</p>
+                        <p>Toplam<br/>Hizmetimiz</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="counter__box ps-xl-5 mb-30">
                         <h3 class="counter__number"><span class="counter">2</span>.5+k</h3>
-                        <p>Mutlu<br />
+                        <p>Mutlu<br/>
                             Müşterilerimiz</p>
                     </div>
                 </div>
@@ -152,42 +171,38 @@
     <!-- counter__area end -->
 
     <!-- chose__us__area start -->
-    <section class="chose__us__area pt-120 pt-lg-60 pb-85 pb-lg-30">
-        <div class="chose__section__wrapper">
-            <div class="big-style-text">NEDEN</div>
-            <div class="chose__video__content" data-background="{{ asset($_siteSetting->home_first_image) }}">
-                @if(!is_null($_siteSetting->home_first_url))
-                    <div class="video__wrapper">
-                        <a class="popup-video mb-30" href="{{ asset($_siteSetting->home_first_url) }}"><i class="bi bi-play-fill"></i></a>
-                    </div>
-                @endif
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6"></div>
-                    <div class="col-lg-6">
-                        <div class="chose__text__wrapper ps-xl-5 ms-xl-4 mb-30 pt-50">
-                            <h4 class="sub__title__one mb-0">NEDEN BİZİMLE ÇALIŞMALISINIZ</h4>
-                            <div class="snake-line mb-15">
-                                <img src="{{ asset('assets/front/img/shape/snake-line-1a.svg') }}" alt="line">
-                            </div>
-                            <h2 class="section__title__one mb-30">Deneyim, inovasyon ve müşteri memnuniyetiyle dolu bir ekibiz
-                            </h2>
-                            <ul class="text-list list-none">
-                                <li>Sektöre Özel Çözümlerde Uzmanlık</li>
-                                <li>En Son Teknolojiler ve Yenilikler</li>
-                                <li>Mevzuata Uygunluk ve Risk Azaltma</li>
-                                <li>Güvenilir, Profesyonel ve Zamanında Yürütme</li>
-                                <li>Ölçeklenebilirlik ve Esneklik</li>
-                            </ul>
-                            <div class="mt-60">
-                                <a href="{{ route('contact') }}" class="ht_btn hover-bg">
+    <!-- chose__us__area start -->
+    <section class="chose__us__area pt-210 pt-lg-90 pt-md-55 pb-200 pb-lg-95">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 pe-xl-0">
+                    <div class="chose__text__wrapper mb-30">
+                        <h4 class="sub__title__one text-theme mb-20">Neden Bizi Tercih Etmelisiniz </h4>
+                        <h2 class="section__title__one mb-25">Deneyim, inovasyon ve müşteri memnuniyetiyle dolu bir
+                            ekibiz
+                        </h2>
+                        <ul class="text-list list-none">
+                            <li>Sektöre Özel Çözümlerde Uzmanlık</li>
+                            <li>En Son Teknolojiler ve Yenilikler</li>
+                            <li>Mevzuata Uygunluk ve Risk Azaltma</li>
+                            <li>Güvenilir, Profesyonel ve Zamanında Yürütme</li>
+                            <li>Ölçeklenebilirlik ve Esneklik</li>
+                        </ul>
+                        <div class="mt-60">
+                            <a href="{{ route('contact') }}" class="ht_btn hover-bg">
                                     <span>DAHA FAZLASI İÇİN
                                         <img src="{{ asset('assets/front/img/icon/arrow1.svg') }}" alt="">
                                     </span>
-                                </a>
-                            </div>
+                            </a>
                         </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-6">
+                    <div class="chose__img__wrapper mb-30">
+                        <img class="main__img__5d ps-xl-5 ms-xl-2" src="{{ asset('assets/front/img/chose/chose-img-5d.jpg') }}"
+                             alt="Chose">
+                        <img class="main__img__6d d-none d-md-inline-block"
+                             src="{{ asset('assets/front/img/chose/chose-img-6d.jpg') }}" alt="Chose">
                     </div>
                 </div>
             </div>
@@ -195,26 +210,19 @@
     </section>
     <!-- chose__us__area end -->
 
+
     <!-- video__area start -->
-    <section class="video__area">
-        <div class="video__section__wrapper pb-80 pb-lg-60">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="full__video__bg" data-background="{{ asset($_siteSetting->home_second_image) }}">
-                            @if(!is_null($_siteSetting->home_second_url))
-                                <div class="video__wrapper">
-                                    <img class="video__text" src="{{ asset('assets/front/img/video/video-text-circular.svg') }}"
-                                         alt="Circular">
-                                    <a class="popup-video" href="{{$_siteSetting->home_second_url}}"><i class="bi bi-play-fill"></i></a>
-                                </div>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="video__area">
+        <div class="full__video__bg video__four" data-background="{{ asset('assets/front/img/video/video-bg-4d.jpg') }}">@if(!is_null($_siteSetting->home_second_url))
+            <div class="video__wrapper">
+
+                <a class="popup-video" href="{{ $_siteSetting->home_second_url }}"><i
+                        class="bi bi-play-fill"></i></a>
+
+
+            </div>@endif
         </div>
-    </section>
+    </div>
     <!-- video__area end -->
 
 
@@ -244,21 +252,24 @@
                     <div class="working__step step-2 mb-30">
                         <span class="step mb-20">Adım 02</span>
                         <h3 class="single__box__title mb-15">Planlama</h3>
-                        <p>Her ayrıntıyı gözden geçiriyoruz. Uzman ekibimiz ile yapılması gerekenlerin yol haritasını çiziyoruz</p>
+                        <p>Her ayrıntıyı gözden geçiriyoruz. Uzman ekibimiz ile yapılması gerekenlerin yol haritasını
+                            çiziyoruz</p>
                     </div>
                 </li>
                 <li class="col-xxl-3 col-md-6">
                     <div class="working__step step-3 mb-30">
                         <span class="step mb-20">Adım 03</span>
                         <h3 class="single__box__title mb-15">Uygulama</h3>
-                        <p>Konforunuzu artırmak için enerji verimliliğini yükseltiyor, sıcaklığı sizinle uyumlu hale getiriyoruz</p>
+                        <p>Konforunuzu artırmak için enerji verimliliğini yükseltiyor, sıcaklığı sizinle uyumlu hale
+                            getiriyoruz</p>
                     </div>
                 </li>
                 <li class="col-xxl-3 col-md-6">
                     <div class="working__step step-4 mb-30">
                         <span class="step mb-20">Adım 04</span>
                         <h3 class="single__box__title mb-15">Sonuç</h3>
-                        <p>Sera gibi serin bir çevre sağlıyor, işlerinizi sıcak günlerde bile rahatlıkla yürütmenize yardımcı oluyoruz</p>
+                        <p>Sera gibi serin bir çevre sağlıyor, işlerinizi sıcak günlerde bile rahatlıkla yürütmenize
+                            yardımcı oluyoruz</p>
                     </div>
                 </li>
             </ul>

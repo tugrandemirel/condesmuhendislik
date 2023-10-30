@@ -40,7 +40,7 @@ class UpdateRequest extends FormRequest
             'home_first_url' => ['nullable', 'max:255', new UrlRule()],
             'home_second_image' => 'nullable|max:255|dimensions:max_width=1290,max_height=600',
             'home_second_url' => ['nullable', 'max:255', new UrlRule()],
-            'home_faq_main' => 'nullable|max:255:|dimensions:max_width=650,max_height=530',
+            'home_faq_main' => 'nullable|max:255|dimensions:max_width=650,max_height=530',
             'home_faq_up' => 'nullable|max:255|dimensions:max_width=205,max_height=205',
             'home_faq_down' => 'nullable|max:255|dimensions:max_width=229,max_height=164',
             'blog_image' => 'nullable|max:255|dimensions:max_width=1920,max_height=620',
