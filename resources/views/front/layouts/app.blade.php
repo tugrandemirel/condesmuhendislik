@@ -41,7 +41,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#913BFF">
 
     <!-- <link rel="manifest" href="site.webmanifest" /> -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset($_siteSetting->favicon) ?? '' }}" />
+    <link rel="icon" href="{{ asset($_siteSetting->favicon) ?? '' }}" />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->

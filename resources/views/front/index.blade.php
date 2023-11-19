@@ -383,7 +383,7 @@
                                             <p>
                                                 İş ekipmanlarının, iş Ekipmanlarının Kullanımında Sağlık ve Güvenlik
                                                 Şartları Yönetmeliğinde öngörülen aralıklarda ve belirtilen yöntemlere
-                                                uygun olarak, yetkili kişilerce yapılın muayene, deney ve test
+                                                uygun olarak, yetkili kişilerce yapılır muayene, deney ve test
                                                 faaliyetlerine denir.
                                             </p>
 
@@ -394,15 +394,6 @@
                                                 saklı kalmak kaydıyla EKIPNET'e kayıtlı ilgili branşlardan mühendis,
                                                 teknik öğretmen, tekniker ve yüksek teknikerleri kapsar.
                                             </p>
-                                            <p>
-                                                İşci sağlığı ve iş güvenliği tüzüğü periodik kontrol konusundaki
-                                                yeterliliği "ehliyeti hükümet veya mahalli idarelerce kabul edilen teknik
-                                                elemanlar tarafından yapılacak" şeklinde ifade etmiştir. Uygulamada
-                                                bakanlık müfettişleri yaptığı denetimlerde yeterli teknik eleman olarak
-                                                makina mühendislerini kabul etmektedir.
-                                                <small>(Yürürlükten Kaldırıldı)</small>
-                                            </p>
-
                                         </div>
                                     </div>
                                 </div>
@@ -420,14 +411,12 @@
                                             <p>
                                                 Periodik kontrol bakim, onarım ve makinalarin revizyon süreclerinin bir
                                                 parçasıdır. Kontrollerde belirtilen uygunsuzlukların bakım faaliyetiyle
-                                                giderilmesi
-                                                gerekmektedir.
+                                                giderilmesi gerekmektedir.
                                             </p>
                                             <p>
                                                 Periodik kontrol eğitim sürecinin bir parçasıdır. Firmada çalışan
                                                 operatörlerin kullandıkları makinalar için yetkinlikleri
                                                 değerlendirilir.
-
                                             </p>
                                             <p>Periyodik kontrol firma içi risk yönetiminin bir parçasıdır ve işletme
                                                 körlüğünü
@@ -472,7 +461,7 @@
                                             <p>İş ekipmanının standartında belirtilmedi ise, üretici firmanın
                                                 belirlediği aralıklarla yapılır, üretici firmada belirtmedi ise işletme
                                                 risk değerlendirmesi yaparak belirtir, işletme de belirtmedi ise azami 1
-                                                yıl süreyle periyodik kontrolller yapılır.</p>
+                                                yıl süreyle periyodik kontroller yapılır.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -499,8 +488,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="{{ route('contact') }}" class="ht_btn hover-bg"><span>Soru Sor <img
-                                        src="{{ asset('assets/front/img/icon/arrow1.svg') }}" alt=""></span></a>
+                            <a href="{{ route('contact') }}" class="ht_btn hover-bg"><span>Soru Sor <img src="{{ asset('assets/front/img/icon/arrow1.svg') }}" alt=""></span></a>
                         </div>
                     </div>
                     <div class="col-lg-6">

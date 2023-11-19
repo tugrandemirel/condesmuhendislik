@@ -22,7 +22,7 @@
             <div class="row gx-4 gx-xxl-5 align-items-center">
                 <div class="col-xl-6 col-md-6">
                     <div class="page-title-wrapper text-md-start text-center">
-                        <h2 class="page-title mb-10">Blog</h2>
+                        <h2 class="page-title mb-10">Makalelerimiz</h2>
                         <nav aria-label="breadcrumb">
                             <ul class="breadcrumb list-none justify-content-center justify-content-md-start">
                                 <li><a href="{{ route('index') }}">Anasayfa</a></li>
