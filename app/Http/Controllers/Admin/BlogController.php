@@ -46,7 +46,7 @@ class BlogController extends Controller
             $data['image'] = self::uploadImage($request->file('image'), $this->_path);
         }
         $data['status'] = $request->has('status') ? 1 : 0;
-        $data['slug'] = Str::slug($data['title']).time();
+        $data['slug'] = Str::slug($data['title']);
         $blog = Blog::create($data);
         if ($blog)
             return redirect()->route('admin.blog.index')->with('success', 'Blog başarıyla oluşturuldu.');
@@ -79,7 +79,7 @@ class BlogController extends Controller
             $data['image'] = self::uploadImage($request->file('image'), $this->_path, $blog->image);
         }
         $data['status'] = $request->has('status') ? 1 : 0;
-        $data['slug'] = Str::slug($data['title']).time();
+        $data['slug'] = Str::slug($data['title']);
         $blog = $blog->update($data);
         if ($blog)
             return redirect()->route('admin.blog.index')->with('success', 'Blog başarıyla güncellendi.');

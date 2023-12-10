@@ -48,7 +48,7 @@ class ServiceController extends Controller
         if ($request->hasFile('icon')) {
             $data['icon'] = self::uploadImage($request->file('icon'), $this->_path);
         }
-        $data['slug'] = Str::slug($data['title']).time();
+        $data['slug'] = Str::slug($data['title']);
         $create = Service::create($data);
         if ($create)
             return redirect()->route('admin.service.index')->with('success', 'Hizmet başarıyla oluşturuldu.');
@@ -84,7 +84,7 @@ class ServiceController extends Controller
         if ($request->hasFile('icon')) {
             $data['icon'] = self::uploadImage($request->file('icon'), $this->_path, $service->image);
         }
-        $data['slug'] = Str::slug($data['title']).time();
+        $data['slug'] = Str::slug($data['title']);
         $service = $service->update($data);
         if ($service)
             return redirect()->route('admin.service.index')->with('success', 'Hizmet başarıyla güncellendi.');
