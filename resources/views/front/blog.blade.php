@@ -1,15 +1,15 @@
 @extends('front.layouts.app')
-@section('title', ' - Makalelerimiz')
+@section('title', ' - Bloglarımız')
 @section('meta_description', isset($seo->description)  ? $seo->description : ''  )
 @section('meta_keywords', isset($seo->keywords)  ? $seo->keywords : ''  )
 
-@section('og_title', isset($seo->title) ? $seo->title : ' Makalelerimiz')
-@section('og_description', isset($seo->description) ? $seo->description : ' Makalelerimiz'  )
-@section('og_image', isset($_siteSetting->logo) ? asset($_siteSetting->logo) : ' Makalelerimiz'  )
+@section('og_title', isset($seo->title) ? $seo->title : ' Bloglarımız')
+@section('og_description', isset($seo->description) ? $seo->description : ' Bloglarımız'  )
+@section('og_image', isset($_siteSetting->logo) ? asset($_siteSetting->logo) : ' Bloglarımız'  )
 
-@section('wa_title', isset($seo->title) ? $seo->title : ' Makalelerimiz')
-@section('wa_description', isset($seo->description) ? $seo->description : ' Makalelerimiz'  )
-@section('wa_image', isset($_siteSetting->logo) ? asset($_siteSetting->logo) : ' Makalelerimiz'  )
+@section('wa_title', isset($seo->title) ? $seo->title : ' Bloglarımız')
+@section('wa_description', isset($seo->description) ? $seo->description : ' Bloglarımız'  )
+@section('wa_image', isset($_siteSetting->logo) ? asset($_siteSetting->logo) : ' Bloglarımız'  )
 
 @section('content')
     <!--page-title-area start-->
@@ -22,11 +22,11 @@
             <div class="row gx-4 gx-xxl-5 align-items-center">
                 <div class="col-xl-6 col-md-6">
                     <div class="page-title-wrapper text-md-start text-center">
-                        <h2 class="page-title mb-10">Makalelerimiz</h2>
+                        <h2 class="page-title mb-10">Bloglarımız</h2>
                         <nav aria-label="breadcrumb">
                             <ul class="breadcrumb list-none justify-content-center justify-content-md-start">
                                 <li><a href="{{ route('index') }}">Anasayfa</a></li>
-                                <li class="active" aria-current="page">Makalalelerimiz</li>
+                                <li class="active" aria-current="page">Bloglarımız</li>
                             </ul>
                         </nav>
                     </div>
@@ -40,7 +40,7 @@
     <section class="blog__area pt-180 pt-lg-120 pb-170 pb-lg-120">
         <div class="container">
             <div class="section__title text-center mb-50">
-                <h2 class="section__title__one">Son Makalelerimiz</h2>
+                <h2 class="section__title__one">Son Bloglarımız</h2>
             </div>
             <div class="row align-items-center justify-content-center">
                 @foreach($blogs as $blog)

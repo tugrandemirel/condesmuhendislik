@@ -1,14 +1,14 @@
 @extends('front.layouts.app')
 @section('title', ' - ' .$blog->title)
-@section('meta_description', isset($blog->meta_description)  ? $blog->meta_description : ' Makalelerimiz Detay'  )
-@section('meta_keywords', isset($blog->meta_keywords)  ? $blog->meta_keywords : ' Makalelerimiz Detay'  )
+@section('meta_description', isset($blog->meta_description)  ? $blog->meta_description : ' Bloglarımız Detay'  )
+@section('meta_keywords', isset($blog->meta_keywords)  ? $blog->meta_keywords : ' Bloglarımız Detay'  )
 
-@section('og_title', isset($blog->title) ? $blog->title : ' Makalelerimiz Detay')
-@section('og_description', isset($blog->meta_description) ? $blog->meta_description : ' Makalelerimiz Detay'  )
+@section('og_title', isset($blog->title) ? $blog->title : ' Bloglarımız Detay')
+@section('og_description', isset($blog->meta_description) ? $blog->meta_description : ' Bloglarımız Detay'  )
 @section('og_image', isset($blog->image) ? asset($blog->image) : asset($_siteSetting->logo)  )
 
-@section('wa_title', isset($blog->title) ? $blog->title : ' Makalelerimiz')
-@section('wa_description', isset($blog->meta_description) ? $blog->meta_description : ' Makalelerimiz Detay'  )
+@section('wa_title', isset($blog->title) ? $blog->title : ' Bloglarımız')
+@section('wa_description', isset($blog->meta_description) ? $blog->meta_description : ' Bloglarımız Detay'  )
 @section('wa_image', isset($blog->image) ? asset($blog->image) : asset($_siteSetting->logo)  )
 
 @section('content')
@@ -22,11 +22,11 @@
             <div class="row gx-4 gx-xxl-5 align-items-center">
                 <div class="col-xl-6 col-md-6">
                     <div class="page-title-wrapper text-md-start text-center">
-                        <h2 class="page-title mb-10">Makalele Detay</h2>
+                        <h2 class="page-title mb-10">Blog Detay</h2>
                         <nav aria-label="breadcrumb">
                             <ul class="breadcrumb list-none justify-content-center justify-content-md-start">
                                 <li><a href="{{ route('index') }}">Anasayfa</a></li>
-                                <li class="active" aria-current="page">Makalemiz</li>
+                                <li class="active" aria-current="page">Blog Detay</li>
                             </ul>
                         </nav>
                     </div>
@@ -70,7 +70,7 @@
                     <div class="widget-right-section ps-xl-4 ms-xl-3 mb-40">
                         <div class="grey-bg widget widget-post mb-60">
                             <div class="widget-title-box mb-20">
-                                <h4 class="widget__title__three">Makale Önerilerimiz</h4>
+                                <h4 class="widget__title__three">Blog Önerilerimiz</h4>
                             </div>
                             <ul class="post-list">
                                 @foreach($recentBlogs as $recent)

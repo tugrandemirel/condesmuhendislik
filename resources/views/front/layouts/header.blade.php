@@ -91,7 +91,7 @@
                                             <a href="{{ route('service') }}">HİZMETLERİMİZ</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('blog') }}">MAKALELERİMİZ</a>
+                                            <a href="{{ route('blog') }}">BLOGLARIMIZ</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('contact') }}">İLETİŞİM</a>

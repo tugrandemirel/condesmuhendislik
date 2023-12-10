@@ -23,8 +23,8 @@ use App\Http\Controllers\Front\IndexController;
 Route::middleware('view.share')->group(function (){
     Route::get('/', [IndexController::class, 'index'])->name('index');
     Route::get('/hakkimizda', [IndexController::class, 'about'])->name('about');
-    Route::get('/makalelerimiz', [IndexController::class, 'blog'])->name('blog');
-    Route::get('/makalelerimiz/{slug}', [IndexController::class, 'blogDetail'])->name('blog.detail');
+    Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
+    Route::get('/blog/{slug}', [IndexController::class, 'blogDetail'])->name('blog.detail');
     Route::get('/hizmetlerimiz', [IndexController::class, 'service'])->name('service');
     Route::get('/hizmetlerimiz/{slug}', [IndexController::class, 'serviceDetail'])->name('service.detail');
     Route::get('/iletisim', [IndexController::class, 'contact'])->name('contact');
