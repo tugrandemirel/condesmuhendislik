@@ -7,7 +7,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-2 col-sm-4 col-6 d-none d-lg-inline-block">
                     <div class="logo-area">
-                        <a class="front" href="{{ route('index') }}"><img src="{{ asset($_siteSetting->logo) }}" width="217" height="62" alt="Header-logo"></a>
+                        <a class="front" href="{{ route('index') }}"><img src="{{ asset($_siteSetting->logo) }}" width="217"  alt="Condes Mühendislik"></a>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-12 custom-border px-lg-0">
@@ -92,6 +92,9 @@
                                         </li>
                                         <li>
                                             <a href="{{ route('blog') }}">BLOGLARIMIZ</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('reference') }}">REFERANSLARIMIZ</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('contact') }}">İLETİŞİM</a>

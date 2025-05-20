@@ -8,7 +8,7 @@
             <div class="row mb-25">
                 <div class="col-xxl-3 col-lg-4 col-md-6">
                     <div class="footer__widget mb-30 px-xxl-3">
-                        <a href="{{ route('index') }}"><img src="{{ asset($_siteSetting->logo) }}" width="217" height="62" alt="{{ $_siteSetting->title }}"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset($_siteSetting->logo) }}" width="217" alt="{{ $_siteSetting->title }}"></a>
                         <p class="footer__description mt-40">  “Mühendislik'te yenilik, Condes'te evrensel standart!”</p>
                     </div>
                 </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Contact;
+use App\Models\Reference;
 use App\Models\Seo;
 use App\Models\Service;
 use App\Models\Slider;
@@ -104,5 +105,17 @@ class IndexController extends Controller
         if ($create)
             return redirect()->back()->with('success', 'Mesajınız başarılı bir şekilde iletilmiştir.');
         return redirect()->back()->with('error', 'Mesajınızın gönderim sırasında bir hata ile karşılaşıldı.');
+    }
+
+    public function reference()
+    {
+        try {
+            $references = Reference::query()
+                ->get();
+
+            return view("front.reference", compact("references"));
+        } catch (\Exception $exception) {
+            abort(404);
+        }
     }
 }

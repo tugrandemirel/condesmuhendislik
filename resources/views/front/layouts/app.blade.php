@@ -56,6 +56,17 @@
     <link rel="stylesheet" href="{{ asset('assets/front/css/aos.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/front/css/spacing.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/front/css/main.css') }}" />
+    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11391486604"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11391486604');
+</script>
+
 </head>
 
 <body>

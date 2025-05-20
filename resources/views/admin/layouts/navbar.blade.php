@@ -114,7 +114,6 @@
                     </a>
                 </li>
 
-                <li class="menu-title mt-2">BLOGLAR VE HİZMETLER</li>
                 <li>
                     <a href="#email" data-bs-toggle="collapse">
                         <i class="mdi mdi-file-document-edit-outline"></i>
@@ -135,7 +134,7 @@
                 <li>
                     <a href="#service" data-bs-toggle="collapse">
                         <i class="mdi mdi-text-box-outline"></i>
-                        <span> Hizmetler </span>
+                        <span> Hizmetler</span>
                         <span class="menu-arrow"></span>
                     </a>
                     <div class="collapse" id="service">
@@ -148,6 +147,12 @@
                             </li>
                         </ul>
                     </div>
+                </li>
+                <li>
+                    <a href="{{ route("admin.references.index") }}">
+                        <i class="mdi mdi-clipboard-edit"></i>
+                        <span> Referanslar</span>
+                    </a>
                 </li>
 
                 <li class="menu-title mt-2">KULLANICI İLETİŞİM </li>

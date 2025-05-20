@@ -7,6 +7,7 @@
     <meta content="CondesMuhendislik" name="Tuğran Demirel" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- App css -->
 
     <link href="{{ asset('assets/admin/css/app.min.css') }}" rel="stylesheet" type="text/css" id="app-style" />

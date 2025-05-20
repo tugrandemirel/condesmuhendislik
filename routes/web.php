@@ -1,15 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\SiteSettingController;
-use App\Http\Controllers\Admin\SeoController;
-use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\BlogController;
-use App\Http\Controllers\Admin\ServiceController;
-use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ContactController;
-
+use App\Http\Controllers\Admin\ReferenceController;
+use App\Http\Controllers\Admin\SeoController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\SiteSettingController;
+use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Front\IndexController;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +28,7 @@ Route::middleware('view.share')->group(function (){
     Route::get('/blog/{slug}', [IndexController::class, 'blogDetail'])->name('blog.detail');
     Route::get('/hizmetlerimiz', [IndexController::class, 'service'])->name('service');
     Route::get('/hizmetlerimiz/{slug}', [IndexController::class, 'serviceDetail'])->name('service.detail');
+    Route::get('/referanslarimiz/', [IndexController::class, 'reference'])->name('reference');
     Route::get('/iletisim', [IndexController::class, 'contact'])->name('contact');
     Route::post('/iletisim', [IndexController::class, 'contactStore'])->name('contact.store');
 });
@@ -63,6 +65,11 @@ Route::prefix('admin')->as('admin.')->group(function () {
         ->parameter('mesajlar', 'contact')
         ->only(['index', 'show'])
         ->names('contact');
+
+    Route::resource("referanslar", ReferenceController::class)
+        ->parameter("referanslar", "references")
+//        ->except(['show'])
+        ->names('references');
     Route::post('upload', [App\Http\Controllers\HomeController::class, 'upload'])->name('upload');
 
 });
